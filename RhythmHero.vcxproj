@@ -22,7 +22,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{580fd82d-120a-4f69-b1cb-6f7344aade99}</ProjectGuid>
+    <ProjectGuid>{d9125ef5-1bfe-4ff4-ad31-47f369b0571f}</ProjectGuid>
     <RootNamespace>RhythmHero</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
