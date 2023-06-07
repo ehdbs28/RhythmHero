@@ -8,12 +8,29 @@
 #include <list>
 #include <io.h>
 #include <conio.h>
-#include<fcntl.h>
+#include <fcntl.h>
+#include <map>
+#include <set>
+#include <unordered_map>
 
-#define SAFE_DELETE(p) if(p) { delete p; p = nullptr; }
+using namespace std;
 
-#define SCREEN_WIDTH		50
-#define SCREEN_HEIGHT		10
+#define SAFE_DELETE(p)				if(p) { delete p; p = nullptr; }
+
+#define SCREEN_WIDTH				50
+#define SCREEN_HEIGHT				10
+
+#define DECLARE_SINGLE(type)		\
+private:							\
+	type() {}						\
+	~type() {}						\
+public:								\
+	static type* GetInstance() {	\
+		static type instance;		\
+		return &instance;			\
+	}								\
+
+#define GET_SINGLE(type)			type::GetInstance()
 
 enum class ConsoleColor {
 	BLACK, BLUE, GREEN, SKYBLUE, RED,

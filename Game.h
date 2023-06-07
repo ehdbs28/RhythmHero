@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Define.h"
 
 class Game
@@ -9,13 +8,19 @@ public:
 	~Game();
 
 public:
-	bool	Init();
+	void	Init();
 	void	Update();
 	void	Render();
+	void	Release();
+
+public:
+	bool	GetGameRunning() { return m_gameRunning; }
+
+public:
+	void	SetGameRunning(bool gameRunning) { m_gameRunning = gameRunning; }
 
 private:
-	void	DrawTitle();
-	void	DrawMenu();
+	bool	m_gameRunning;
 
 };
 

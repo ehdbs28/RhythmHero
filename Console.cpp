@@ -1,11 +1,12 @@
 #include "Console.h"
 
-Console::Console()
+void Console::SetScreenSize(int x, int y)
 {
-}
-
-Console::~Console()
-{
+//	string str = "mode con cols=50 lines=50"
+	char buf[1024];
+	sprintf_s(buf, "mode con lines=%d cols=%d", x, y);
+	system(buf);
+//	system("mode con lines=35 cols=125");
 }
 
 void Console::FullScreen()
