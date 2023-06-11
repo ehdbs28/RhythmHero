@@ -15,6 +15,14 @@ public:
 
 private:
 	void	DrawAsciiTitle();
+	void	DrawMenu();
+	int		MenuSelect();
+
+private:
+	int		m_menuPosY;
+	int		m_menuPosX;
+
+	int		m_cursor;
 
 };
 

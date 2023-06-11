@@ -5,6 +5,9 @@
 Game::Game()
 {
 	m_gameRunning = false;
+	m_input = nullptr;
+
+	g_game = shared_from_this();
 }
 
 Game::~Game()
@@ -13,6 +16,10 @@ Game::~Game()
 
 void Game::Init()
 {
+	m_input = make_shared<InputManager>();
+	if (m_input)
+		m_input->Init();
+
 	GET_SINGLE(Console)->ConsoleCursor(false, 5);
 
 	GET_SINGLE(Console)->SetScreenSize(SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -28,6 +35,9 @@ void Game::Init()
 
 void Game::Update()
 {
+	if(m_input)
+		m_input->Update();
+
 	GET_SINGLE(SceneManager)->Update();
 }
 

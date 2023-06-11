@@ -32,9 +32,13 @@ public:								\
 
 #define GET_SINGLE(type)			type::GetInstance()
 
+#define INPUT						g_game->GetInput();
+
 enum class ConsoleColor {
 	BLACK, BLUE, GREEN, SKYBLUE, RED,
 	VOILET, YELLOW, LIGHT_GRAY, GRAY,
 	LIGHT_BLUE, LIGHT_GREEN, MINT, LIGHT_RED,
 	LIGHT_VIOLET, LIGHT_YELLOW, WHITE
 };
+
+extern shared_ptr<class Game> g_game;

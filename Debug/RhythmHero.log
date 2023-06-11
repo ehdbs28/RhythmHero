@@ -1,2 +1,6 @@
 ﻿  Game.cpp
+  InputManager.cpp
+  TitleScene.cpp
+D:\CppProject\RhythmHero\RhythmHero\TitleScene.cpp(38,11): warning C4129: '_': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+  코드를 생성하고 있습니다...
   RhythmHero.vcxproj -> D:\CppProject\RhythmHero\Debug\RhythmHero.exe
