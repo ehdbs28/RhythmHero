@@ -2,11 +2,24 @@
 
 void Console::SetScreenSize(int x, int y)
 {
-//	string str = "mode con cols=50 lines=50"
 	char buf[1024];
-	sprintf_s(buf, "mode con lines=%d cols=%d", x, y);
+	sprintf_s(buf, "mode con cols=%d lines=%d", x, y);
 	system(buf);
-//	system("mode con lines=35 cols=125");
+}
+
+void Console::SetConsoleFont(const WCHAR *font, BOOL bold)
+{
+	HANDLE hcsb = CreateFileA("CONOUT$", GENERIC_WRITE | GENERIC_READ, FILE_SHARE_WRITE, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+	CONSOLE_FONT_INFOEX cfi = { sizeof(cfi) };
+
+	GetCurrentConsoleFontEx(hcsb, false, &cfi);
+
+	wcscpy_s(cfi.FaceName, font);
+	cfi.FontWeight = (bold ? 700 : 400);
+
+	SetCurrentConsoleFontEx(hcsb, false, &cfi);
+
+	CloseHandle(hcsb);
 }
 
 void Console::FullScreen()

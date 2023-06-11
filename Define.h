@@ -17,8 +17,8 @@ using namespace std;
 
 #define SAFE_DELETE(p)				if(p) { delete p; p = nullptr; }
 
-#define SCREEN_WIDTH				50
-#define SCREEN_HEIGHT				10
+#define SCREEN_WIDTH				125
+#define SCREEN_HEIGHT				30
 
 #define DECLARE_SINGLE(type)		\
 private:							\

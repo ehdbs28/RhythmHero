@@ -7,6 +7,7 @@ class Console
 
 public:
 	void	SetScreenSize(int x, int y);
+	void	SetConsoleFont(const WCHAR *font, BOOL bold);
 	void	FullScreen();
 	BOOL	Gotoxy(int,int);
 	void	ConsoleCursor(bool, DWORD);

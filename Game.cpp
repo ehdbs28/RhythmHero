@@ -13,7 +13,10 @@ Game::~Game()
 
 void Game::Init()
 {
-	GET_SINGLE(Console)->SetScreenSize(1, 1);
+	GET_SINGLE(Console)->ConsoleCursor(false, 5);
+
+	GET_SINGLE(Console)->SetScreenSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+	GET_SINGLE(Console)->SetConsoleFont(L"D2Coding", true);
 
 	GET_SINGLE(SceneManager)->Init();
 
