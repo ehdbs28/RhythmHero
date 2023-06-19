@@ -7,7 +7,7 @@ void Console::SetScreenSize(int x, int y)
 	system(buf);
 }
 
-void Console::SetConsoleFont(const WCHAR *font, BOOL bold)
+void Console::SetConsoleFont(const WCHAR *font, COORD dwSize, BOOL bold)
 {
 	HANDLE hcsb = CreateFileA("CONOUT$", GENERIC_WRITE | GENERIC_READ, FILE_SHARE_WRITE, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 	CONSOLE_FONT_INFOEX cfi = { sizeof(cfi) };
@@ -16,6 +16,7 @@ void Console::SetConsoleFont(const WCHAR *font, BOOL bold)
 
 	wcscpy_s(cfi.FaceName, font);
 	cfi.FontWeight = (bold ? 700 : 400);
+	cfi.dwFontSize = dwSize;
 
 	SetCurrentConsoleFontEx(hcsb, false, &cfi);
 
@@ -42,9 +43,11 @@ void Console::ConsoleCursor(bool _bvis, DWORD _dwsize)
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &curinfo);
 }
 
-void Console::SetColor(int _color, int _bgcolor)
+int Console::SetColor(int _color, int _bgcolor)
 {
+	int lastColor = GetBgColor() << 4 || GetColor();
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (_bgcolor << 4) | _color);
+	return lastColor;
 }
 
 int Console::GetColor()

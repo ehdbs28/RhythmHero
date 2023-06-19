@@ -6,6 +6,8 @@ enum class KEY_TYPE {
 	DOWN = VK_DOWN,
 	LEFT = VK_LEFT,
 	RIGHT = VK_RIGHT,
+	SPACE = VK_SPACE,
+	BACK = VK_BACK,
 };
 
 enum class KEY_STATE {
@@ -23,9 +25,7 @@ enum {
 
 class InputManager
 {
-public:
-	InputManager();
-	~InputManager();
+	DECLARE_SINGLE(InputManager);
 
 public:
 	void				Init();

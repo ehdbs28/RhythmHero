@@ -12,13 +12,15 @@
 #include <map>
 #include <set>
 #include <unordered_map>
+#include "Pos.h"
+//#include "Console.h"
 
 using namespace std;
 
 #define SAFE_DELETE(p)				if(p) { delete p; p = nullptr; }
 
-#define SCREEN_WIDTH				125
-#define SCREEN_HEIGHT				30
+#define SCREEN_WIDTH				140
+#define SCREEN_HEIGHT				35
 
 #define DECLARE_SINGLE(type)		\
 private:							\
@@ -28,11 +30,9 @@ public:								\
 	static type* GetInstance() {	\
 		static type instance;		\
 		return &instance;			\
-	}								\
+	}								
 
 #define GET_SINGLE(type)			type::GetInstance()
-
-#define INPUT						g_game->GetInput();
 
 enum class ConsoleColor {
 	BLACK, BLUE, GREEN, SKYBLUE, RED,
@@ -40,5 +40,3 @@ enum class ConsoleColor {
 	LIGHT_BLUE, LIGHT_GREEN, MINT, LIGHT_RED,
 	LIGHT_VIOLET, LIGHT_YELLOW, WHITE
 };
-
-extern shared_ptr<class Game> g_game;

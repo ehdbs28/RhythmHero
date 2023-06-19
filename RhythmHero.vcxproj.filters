@@ -20,6 +20,12 @@
     <Filter Include="Manager">
       <UniqueIdentifier>{9086ff07-7ea5-4103-83b4-a67fd3e42dee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{d1f1c2e8-d4d2-44f9-93e0-15a68f9e761f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{28cd1f93-894c-4f6c-ac2b-af23fbb9130b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -43,6 +49,21 @@
     <ClCompile Include="InputManager.cpp">
       <Filter>Manager</Filter>
     </ClCompile>
+    <ClCompile Include="InfomationScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Pos.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLine.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
@@ -65,6 +86,21 @@
     </ClInclude>
     <ClInclude Include="InputManager.h">
       <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="InfomationScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Pos.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLine.h">
+      <Filter>Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

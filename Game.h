@@ -1,8 +1,7 @@
 #pragma once
 #include "Define.h"
-#include "InputManager.h"
 
-class Game : public enable_shared_from_this<Game>
+class Game
 {
 public:
 	Game();
@@ -15,15 +14,13 @@ public:
 	void	Release();
 
 public:
-	bool						GetGameRunning() { return m_gameRunning; }
-	shared_ptr<InputManager>	GetInput() { return m_input; }
+	static bool		GetGameRunning() { return m_gameRunning; }
 
 public:
-	void						SetGameRunning(bool gameRunning) { m_gameRunning = gameRunning; }
+	static void		SetGameRunning(bool gameRunning) { m_gameRunning = gameRunning; }
 
 private:
-	bool						m_gameRunning;
-	shared_ptr<InputManager>	m_input;
+	static bool		m_gameRunning;
 
 };
 

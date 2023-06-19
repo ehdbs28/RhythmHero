@@ -141,8 +141,13 @@
   <ItemGroup>
     <ClCompile Include="Console.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameLine.cpp" />
+    <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="InfomationScene.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Pos.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="TitleScene.cpp" />
@@ -151,7 +156,12 @@
     <ClInclude Include="Console.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameLine.h" />
+    <ClInclude Include="GameScene.h" />
+    <ClInclude Include="InfomationScene.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Pos.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="TitleScene.h" />

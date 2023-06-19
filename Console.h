@@ -7,11 +7,11 @@ class Console
 
 public:
 	void	SetScreenSize(int x, int y);
-	void	SetConsoleFont(const WCHAR *font, BOOL bold);
+	void	SetConsoleFont(const WCHAR *font, COORD dwSize, BOOL bold);
 	void	FullScreen();
 	BOOL	Gotoxy(int,int);
 	void	ConsoleCursor(bool, DWORD);
-	void	SetColor(int, int);
+	int		SetColor(int, int);
 	int		GetColor();
 	int		GetBgColor();
 };
