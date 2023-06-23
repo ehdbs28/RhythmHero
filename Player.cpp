@@ -2,13 +2,13 @@
 
 Player::Player()
 {
-	m_playerPos = Pos();
+	m_pos = Pos();
 	m_thickness = 1;
 }
 
 Player::Player(Pos pos, int width)
 {
-	m_playerPos = pos;
+	m_pos = pos;
 	m_thickness = width;
 }
 
@@ -30,7 +30,10 @@ void Player::Render()
 	int lastBg = lastColor >> 4;
 	int lastCo = (lastBg << 4) ^ lastColor;
 
-	cout << " ";
+	for (int i = 0; i < m_thickness; i++) {
+		GET_SINGLE(Console)->Gotoxy(m_pos.X(), m_pos.Y() + i);
+		cout << " ";
+	}
 
 	GET_SINGLE(Console)->SetColor(lastCo, lastBg);
 }

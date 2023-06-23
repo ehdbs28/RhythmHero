@@ -16,11 +16,11 @@ public:
 	void	Release();
 
 public:
-	Pos&	GetPos() { return m_playerPos; }
+	Pos&	GetPos() { return m_pos; }
 	int		GetThickness() { return m_thickness; }
 
 private:
-	Pos				m_playerPos;
+	Pos				m_pos;
 	int				m_thickness;
 
 };

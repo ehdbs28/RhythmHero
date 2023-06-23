@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <iostream>
 #include <Windows.h>
@@ -17,6 +17,9 @@
 using namespace std;
 
 #define SAFE_DELETE(p)				if(p) { delete p; p = nullptr; }
+
+#define WORD_WIDTH					8
+#define WORD_HEIGHT					5
 
 #define SCREEN_WIDTH				140
 #define SCREEN_HEIGHT				35
@@ -38,4 +41,77 @@ enum class ConsoleColor {
 	VOILET, YELLOW, LIGHT_GRAY, GRAY,
 	LIGHT_BLUE, LIGHT_GREEN, MINT, LIGHT_RED,
 	LIGHT_VIOLET, LIGHT_YELLOW, WHITE
+};
+
+static wstring NUMBER_WORDS[10][5] = {
+	{
+		{L"██████"},
+		{L"██  ██"},
+		{L"██  ██"},
+		{L"██  ██"},
+		{L"██████"},
+	},
+	{
+		{L"   ██ "},
+		{L" ████ "},
+		{L"   ██ "},
+		{L"   ██ "},
+		{L"   ██ "},
+	},
+	{
+		{L"██████"},
+		{L"    ██"},
+		{L"██████"},
+		{L"██    "},
+		{L"██████"},
+	},
+	{
+		{L"██████"},
+		{L"    ██"},
+		{L" █████"},
+		{L"    ██"},
+		{L"██████"},
+	},
+	{
+		{L"██  ██"},
+		{L"██  ██"},
+		{L"██████"},
+		{L"    ██"},
+		{L"    ██"},
+	},
+	{
+		{L"██████"},
+		{L"██    "},
+		{L"██████"},
+		{L"    ██"},
+		{L"██████"},
+	},
+	{
+		{L"██████"},
+		{L"██    "},
+		{L"██████"},
+		{L"██  ██"},
+		{L"██████"},
+	},
+	{
+		{L"██████"},
+		{L"    ██"},
+		{L"    ██"},
+		{L"    ██"},
+		{L"    ██"},
+	},
+	{
+		{L"██████"},
+		{L"██  ██"},
+		{L"██████"},
+		{L"██  ██"},
+		{L"██████"},
+	},
+	{
+		{L"██████"},
+		{L"██  ██"},
+		{L"██████"},
+		{L"    ██"},
+		{L"██████"},
+	}
 };

@@ -129,9 +129,6 @@
     <ClInclude Include="ProgressBar.h">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="NumberAscii.h">
-      <Filter>Core</Filter>
-    </ClInclude>
     <ClInclude Include="Note.h">
       <Filter>Note</Filter>
     </ClInclude>

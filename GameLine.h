@@ -28,6 +28,7 @@ public:
 
 public:
 	void	DrawLine();
+	void	DrawEdge();
 
 private:
 	Pos					m_linePos;

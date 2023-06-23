@@ -1,5 +1,4 @@
 #include "Combo.h"
-#include "NumberAscii.h"
 
 Combo::Combo()
 {
@@ -39,7 +38,7 @@ void Combo::Render()
 	for (int i = 0; i < 3; i++) {
 		for (int y = 0; y < WORD_HEIGHT; y++) {
 			GET_SINGLE(Console)->Gotoxy(m_pos.X() + i * WORD_WIDTH, m_pos.Y() + y);
-			wcout << NUMBER_WORDS[combo[i] - '0'][y];
+			wcout << NUMBER_WORDS[combo[i] - '0'][y] ;
 		}
 	}
 

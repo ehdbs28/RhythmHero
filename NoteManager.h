@@ -1,7 +1,6 @@
 #pragma once
 #include "Define.h"
 
-// 이진탐색으로 찾으면 될듯
 enum class JUDGEMENT_TYPE {
 	PERFECT,
 	GREAT,
@@ -16,19 +15,24 @@ class NoteManager
 
 public:
 	void			Init();
-	void			Update();
+	void			Update(float dt);
 	void			Render();
 	void			Release();
 
 public:
-	JUDGEMENT_TYPE	Judgement(float judgement);
-
+	void				Setting(float startDelay, float judgementLenght = 10.0f, float defaultNoteSpeed = 80.0f);
+	JUDGEMENT_TYPE		Judgement();
+	shared_ptr<Note>	EqualNotePos(int x);
 
 private:
-	float			m_judgementLength;
-	float			m_songStartDelay;
+	float						m_judgementLength;
+	float						m_delay;
 
-	float			m_timer;
+	float						m_timer;
+	float						m_defaultNoteSpeed;
+
+	list<shared_ptr<Note>>		m_noteSheet;
+	vector<shared_ptr<Note>>	m_notes;
 
 };
 
