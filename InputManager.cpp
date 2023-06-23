@@ -5,7 +5,7 @@ void InputManager::Init()
 	m_states.resize(KEY_TYPE_COUNT, KEY_STATE::NONE);
 }
 
-void InputManager::Update()
+void InputManager::Update(float dt)
 {
 	for (UINT key = 0; key < KEY_TYPE_COUNT; ++key) {
 		if (GetKeyState(key) & 0x80) {

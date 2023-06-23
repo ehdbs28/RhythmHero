@@ -32,7 +32,7 @@ void ProgressBar::Init()
 	SetPercent(0.0f);
 }
 
-void ProgressBar::Update()
+void ProgressBar::Update(float dt)
 {
 }
 

@@ -23,7 +23,7 @@ void Combo::Init()
 {
 }
 
-void Combo::Update()
+void Combo::Update(float dt)
 {
 }
 

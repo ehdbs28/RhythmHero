@@ -29,7 +29,7 @@ void GameLine::Init()
 		m_player->Init();
 }
 
-void GameLine::Update()
+void GameLine::Update(float dt)
 {
 	if (m_player)
 		m_player->Update();

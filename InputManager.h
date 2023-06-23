@@ -29,7 +29,7 @@ class InputManager
 
 public:
 	void				Init();
-	void				Update();
+	void				Update(float dt);
 
 public:
 	bool				GetButton(KEY_TYPE key) { return GetState(key) == KEY_STATE::PRESS; }

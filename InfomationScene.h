@@ -9,7 +9,7 @@ public:
 
 public:
 	void		Init() override;
-	void		Update() override;
+	void		Update(float dt) override;
 	void		Render() override;
 	void		Release() override;
 

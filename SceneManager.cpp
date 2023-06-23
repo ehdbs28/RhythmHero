@@ -28,12 +28,12 @@ void SceneManager::Init()
 	m_activeScene = NULL;
 }
 
-void SceneManager::Update()
+void SceneManager::Update(float dt)
 {
 	if (m_activeScene == NULL)
 		return;
 
-	m_activeScene->Update();
+	m_activeScene->Update(dt);
 }
 
 void SceneManager::Render()

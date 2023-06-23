@@ -28,16 +28,16 @@ void GameScene::Init()
 		m_gameLine->Init();
 }
 
-void GameScene::Update()
+void GameScene::Update(float dt)
 {
 	if (m_combo)
-		m_combo->Update();
+		m_combo->Update(dt);
 
 	if (m_feverBar)
-		m_feverBar->Update();
+		m_feverBar->Update(dt);
 
 	if (m_gameLine)
-		m_gameLine->Update();
+		m_gameLine->Update(dt);
 }
 
 void GameScene::Render()

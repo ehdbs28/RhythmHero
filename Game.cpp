@@ -38,10 +38,10 @@ void Game::Init()
 	m_gameRunning = true;
 }
 
-void Game::Update()
+void Game::Update(float dt)
 {
-	GET_SINGLE(InputManager)->Update();
-	GET_SINGLE(SceneManager)->Update();
+	GET_SINGLE(InputManager)->Update(dt);
+	GET_SINGLE(SceneManager)->Update(dt);
 }
 
 void Game::Render()

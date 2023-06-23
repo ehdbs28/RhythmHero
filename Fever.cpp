@@ -26,7 +26,7 @@ void Fever::Init()
 {
 }
 
-void Fever::Update()
+void Fever::Update(float dt)
 {
 	if (m_progressingFever) {
 		m_currentTime = (UINT)time(nullptr);

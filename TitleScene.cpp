@@ -34,7 +34,7 @@ void TitleScene::Init()
 {
 }
 
-void TitleScene::Update()
+void TitleScene::Update(float dt)
 {
 	if (GET_SINGLE(InputManager)->GetButtonDown(KEY_TYPE::DOWN)) {
 		if (m_cursor != 2)

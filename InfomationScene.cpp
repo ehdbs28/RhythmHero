@@ -28,7 +28,7 @@ void InfomationScene::Init()
 {
 }
 
-void InfomationScene::Update()
+void InfomationScene::Update(float dt)
 {
 	if (GET_SINGLE(InputManager)->GetButtonDown(KEY_TYPE::BACK)) {
 		GET_SINGLE(SceneManager)->LoadScene(L"Title");
