@@ -26,6 +26,9 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{28cd1f93-894c-4f6c-ac2b-af23fbb9130b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Note">
+      <UniqueIdentifier>{a4ce2ec8-c9c9-432e-b606-297f92c233d7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -72,6 +75,12 @@
     </ClCompile>
     <ClCompile Include="ProgressBar.cpp">
       <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Note.cpp">
+      <Filter>Note</Filter>
+    </ClCompile>
+    <ClCompile Include="NoteManager.cpp">
+      <Filter>Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +131,12 @@
     </ClInclude>
     <ClInclude Include="NumberAscii.h">
       <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Note.h">
+      <Filter>Note</Filter>
+    </ClInclude>
+    <ClInclude Include="NoteManager.h">
+      <Filter>Manager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
