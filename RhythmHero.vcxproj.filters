@@ -64,6 +64,15 @@
     <ClCompile Include="GameLine.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
+    <ClCompile Include="Combo.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Fever.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressBar.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h">
@@ -101,6 +110,18 @@
     </ClInclude>
     <ClInclude Include="GameLine.h">
       <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Combo.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Fever.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgressBar.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="NumberAscii.h">
+      <Filter>Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

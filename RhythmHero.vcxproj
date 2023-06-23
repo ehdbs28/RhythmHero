@@ -116,6 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,6 +131,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,7 +141,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Combo.cpp" />
     <ClCompile Include="Console.cpp" />
+    <ClCompile Include="Fever.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameLine.cpp" />
     <ClCompile Include="GameScene.cpp" />
@@ -148,20 +152,25 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Pos.cpp" />
+    <ClCompile Include="ProgressBar.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Combo.h" />
     <ClInclude Include="Console.h" />
     <ClInclude Include="Define.h" />
+    <ClInclude Include="Fever.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameLine.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="InfomationScene.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="NumberAscii.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Pos.h" />
+    <ClInclude Include="ProgressBar.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="TitleScene.h" />

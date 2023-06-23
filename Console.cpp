@@ -45,7 +45,7 @@ void Console::ConsoleCursor(bool _bvis, DWORD _dwsize)
 
 int Console::SetColor(int _color, int _bgcolor)
 {
-	int lastColor = GetBgColor() << 4 || GetColor();
+	int lastColor = GetBgColor() << 4 | GetColor();
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (_bgcolor << 4) | _color);
 	return lastColor;
 }

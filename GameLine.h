@@ -7,7 +7,7 @@ class GameLine
 {
 public:
 	GameLine();
-	GameLine(Pos pos, int width, int height);
+	GameLine(Pos pos, int width, int height, string name);
 	~GameLine();
 
 public:
@@ -34,6 +34,8 @@ private:
 
 	int					m_width;
 	int					m_height;
+
+	string				m_name;
 
 	shared_ptr<Player>	m_player;
 };

@@ -17,10 +17,10 @@ public:
 
 public:
 	Pos&	GetPos() { return m_playerPos; }
-	int		GetWidth() { return m_width; }
+	int		GetThickness() { return m_thickness; }
 
 private:
 	Pos				m_playerPos;
-	int				m_width;
+	int				m_thickness;
 
 };
