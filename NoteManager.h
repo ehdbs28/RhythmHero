@@ -34,5 +34,8 @@ private:
 	list<shared_ptr<Note>>		m_noteSheet;
 	vector<shared_ptr<Note>>	m_notes;
 
+	Pos							m_right;
+	Pos							m_left;
+
 };
 

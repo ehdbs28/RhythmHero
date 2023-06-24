@@ -1,26 +1,47 @@
 ﻿  NoteManager.cpp
-D:\CppProject\RhythmHero\RhythmHero\NoteManager.cpp(40,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-D:\CppProject\RhythmHero\RhythmHero\NoteManager.cpp(47,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-D:\CppProject\RhythmHero\RhythmHero\NoteManager.cpp(75,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+D:\CppProject\RhythmHero\RhythmHero\NoteManager.cpp(233,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+D:\CppProject\RhythmHero\RhythmHero\NoteManager.cpp(240,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+D:\CppProject\RhythmHero\RhythmHero\NoteManager.cpp(268,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(158,77): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
           with
           [
               _Ty=int
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2021): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,Pos,int,NOTE_TYPE,float,float>(_Ty &,Pos &&,int &&,NOTE_TYPE &&,float &&,float &&) noexcept(false)'에 대한 참조를 확인하세요.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2021): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,Pos&,int,NOTE_TYPE,float,float>(_Ty &,Pos &,int &&,NOTE_TYPE &&,float &&,float &&) noexcept(false)'에 대한 참조를 확인하세요.
           with
           [
               _Ty=Note
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Pos,int,NOTE_TYPE,float,float>(Pos &&,int &&,NOTE_TYPE &&,float &&,float &&)'에 대한 참조를 확인하세요.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Pos&,int,NOTE_TYPE,float,float>(Pos &,int &&,NOTE_TYPE &&,float &&,float &&)'에 대한 참조를 확인하세요.
           with
           [
               _Ty=Note
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2748): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Pos,int,NOTE_TYPE,float,float>(Pos &&,int &&,NOTE_TYPE &&,float &&,float &&)'에 대한 참조를 확인하세요.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2748): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Pos&,int,NOTE_TYPE,float,float>(Pos &,int &&,NOTE_TYPE &&,float &&,float &&)'에 대한 참조를 확인하세요.
           with
           [
               _Ty=Note
           ]
-D:\CppProject\RhythmHero\RhythmHero\NoteManager.cpp(8): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<Note> std::make_shared<Note,Pos,int,NOTE_TYPE,float,float>(Pos &&,int &&,NOTE_TYPE &&,float &&,float &&)'에 대한 참조를 확인하세요.
+D:\CppProject\RhythmHero\RhythmHero\NoteManager.cpp(11): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<Note> std::make_shared<Note,Pos&,int,NOTE_TYPE,float,float>(Pos &,int &&,NOTE_TYPE &&,float &&,float &&)'에 대한 참조를 확인하세요.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(158,77): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=double
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2021): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,Pos&,double,NOTE_TYPE,float,float>(_Ty &,Pos &,double &&,NOTE_TYPE &&,float &&,float &&) noexcept(false)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=Note
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Pos&,double,NOTE_TYPE,float,float>(Pos &,double &&,NOTE_TYPE &&,float &&,float &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=Note
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2748): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Pos&,double,NOTE_TYPE,float,float>(Pos &,double &&,NOTE_TYPE &&,float &&,float &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=Note
+          ]
+D:\CppProject\RhythmHero\RhythmHero\NoteManager.cpp(12): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<Note> std::make_shared<Note,Pos&,double,NOTE_TYPE,float,float>(Pos &,double &&,NOTE_TYPE &&,float &&,float &&)'에 대한 참조를 확인하세요.
   RhythmHero.vcxproj -> D:\CppProject\RhythmHero\Debug\RhythmHero.exe

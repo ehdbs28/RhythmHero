@@ -46,15 +46,39 @@ void Note::Update(float dt)
 	float next = m_pos.X() + dt * m_noteSpeed;
 	m_pos.SetX(next);
 
-	if (m_pos.X() >= SCREEN_WIDTH / 2 - 2 && m_pos.X() <= SCREEN_WIDTH / 2 + 2) {
-		Release();
+	if (m_noteSpeed > 0) {
+		if (m_pos.X() >= SCREEN_WIDTH / 2 - 2) {
+			if (m_type == NOTE_TYPE::LONG) {
+				if (m_pos.X() - m_length >= SCREEN_WIDTH / 2 - 2) {
+					Release();
+				}
+				m_length--;
+				m_pos.SetX(m_pos.X() - 1);
+			}
+			else {
+				Release();
+			}
+		}
 	}
+	else {
+		if (m_pos.X() <= SCREEN_WIDTH / 2 + 2) {
+			if (m_type == NOTE_TYPE::LONG) {
+				if (m_pos.X() + m_length <= SCREEN_WIDTH / 2 + 2) {
+					Release();
+				}
+				m_length--;
+				m_pos.SetX(m_pos.X() + 1);
+			}
+			else {
+				Release();
+			}
+		}
+	}
+
 }
 
 void Note::Render()
 {
-	GET_SINGLE(Console)->SetColor((int)m_color, (int)m_color);
-
 	for (int i = 0; i < 4; i++) {
 		GET_SINGLE(Console)->Gotoxy(m_pos.X(), m_pos.Y() + i);
 		cout << " ";

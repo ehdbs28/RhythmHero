@@ -88,6 +88,7 @@ void GameLine::DrawLine() {
 			m_player->Render();
 		}
 		else if (note) {
+			GET_SINGLE(Console)->SetColor((int)note->GetColor(), (int)note->GetColor());
 			note->Render();
 		}
 		else {

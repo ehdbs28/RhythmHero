@@ -28,6 +28,7 @@ public:
 	ConsoleColor	GetColor() { return m_color; }
 	float			GetLenght() { return m_length; }
 	float			GetDelay() { return m_delay; }
+	float			GetSpeed() { return m_noteSpeed; }
 
 private:
 	Pos				m_pos;

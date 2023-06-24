@@ -15,7 +15,7 @@ GameScene::~GameScene()
 void GameScene::Init()
 {
 	m_combo = make_shared<Combo>(Pos(SCREEN_WIDTH / 2 - 11, 5));
-	m_gameLine = make_shared<GameLine>(Pos(0, SCREEN_HEIGHT / 2 - 3), SCREEN_WIDTH, 10, "VIichan - DAYBREAK FRONTLINE");
+	m_gameLine = make_shared<GameLine>(Pos(0, SCREEN_HEIGHT / 2 - 3), SCREEN_WIDTH, 10, " YOASOBI - IDOL");
 	m_feverBar = make_shared<ProgressBar>(Pos(SCREEN_WIDTH / 2 - 28, SCREEN_HEIGHT / 2 + 7), 60, 1, 0, 1, "");
 
 	if (m_combo)
