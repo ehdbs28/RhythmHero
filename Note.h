@@ -8,13 +8,12 @@ enum class NOTE_TYPE {
 	REVERSE,
 };
 
-class Note
+class Note : public enable_shared_from_this<Note>
 {
 public:
 	Note();
 	Note(Pos pos, float delay, NOTE_TYPE type, float lenght = 1.0f, float speed = 80.0f);
 	~Note();
-
 
 public:
 	void	Init();
@@ -29,6 +28,9 @@ public:
 	float			GetLenght() { return m_length; }
 	float			GetDelay() { return m_delay; }
 	float			GetSpeed() { return m_noteSpeed; }
+
+public:
+	void			SetLenght(float lenght) { m_length = lenght; }
 
 private:
 	Pos				m_pos;

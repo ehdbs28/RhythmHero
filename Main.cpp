@@ -27,6 +27,7 @@ void MainLoop()
 
 int main() {
 	game = new Game();
+	system("title RHYTHM HERO");
 
 	// 현재 카운트
 	QueryPerformanceCounter(&g_liPrevCount);
@@ -39,11 +40,6 @@ int main() {
 	while (game->GetGameRunning()) {
 		MainLoop();
 		game->Update(g_fDT); 
-
-		char buf[1024];
-		sprintf_s(buf, "title %f", g_fDT);
-		system(buf);
-		
 		game->Render();
 	}
 

@@ -3,7 +3,7 @@
 
 class GameLine;
 class Combo;
-class ProgressBar;
+class Fever;
 class GameScene : public Scene
 {
 public:
@@ -18,6 +18,7 @@ public:
 
 public:
 	void	Setting(string song, string author);
+	void	DrawJudgement();
 
 private:
 	string					m_song;
@@ -25,7 +26,10 @@ private:
 
 	shared_ptr<Combo>		m_combo;
 	shared_ptr<GameLine>	m_gameLine;
-	shared_ptr<ProgressBar>	m_feverBar;
+	shared_ptr<Fever>		m_feverBar;
+		
+	bool					m_playing;
+	float					m_currentTime;
 
 };
 

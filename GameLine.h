@@ -27,6 +27,7 @@ public:
 	void	SetHeight(int height) { m_height = height; }
 
 public:
+	void	NoteInput(bool right);
 	void	DrawLine();
 	void	DrawEdge();
 
@@ -35,6 +36,7 @@ private:
 
 	int					m_width;
 	int					m_height;
+	int					m_judgementWidth;
 
 	string				m_name;
 

@@ -1,26 +1,22 @@
 #pragma once
 #include "Define.h"
 #include "Console.h"
+#include "ProgressBar.h"
 
-class Fever
+class Fever : public ProgressBar
 {
 public:
 	Fever();
-	Fever(float duration);
+	Fever(Pos pos, int width, int height, float left, float right, string name, float duration);
 	~Fever();
 
 public:
-	void	Init();
-	void	Update(float dt);
-	void	Render();
-	void	Release();
+	void 	Init() override;
+	void	Update(float dt) override;
+	void	Render() override;
+	void	Release() override;
 
-public:
-	float	GetPercent() { return m_percent; }
 	bool	IsProgressing() { return m_progressingFever; }
-
-public:
-	void	SetPercent(float increase);
 	
 public:
 	void	StartFever();
@@ -31,7 +27,6 @@ private:
 	UINT	m_feverStartTime;
 	UINT	m_currentTime;
 
-	float	m_percent;
 	bool	m_progressingFever;
 
 };	

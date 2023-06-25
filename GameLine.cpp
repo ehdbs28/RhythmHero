@@ -2,6 +2,7 @@
 #include "Player.h"
 #include "Note.h"
 #include "NoteManager.h"
+#include "InputManager.h"
 
 GameLine::GameLine()
 {
@@ -9,6 +10,7 @@ GameLine::GameLine()
 	m_width = 0;
 	m_height = 0;
 	m_name = "";
+	m_judgementWidth = 10;
 }
 
 GameLine::GameLine(Pos pos, int width, int height, string name)
@@ -17,6 +19,7 @@ GameLine::GameLine(Pos pos, int width, int height, string name)
 	m_width = width;
 	m_height = height;
 	m_name = name;
+	m_judgementWidth = 10;
 }
 
 GameLine::~GameLine()
@@ -38,6 +41,18 @@ void GameLine::Init()
 
 void GameLine::Update(float dt)
 {
+	bool value = false;
+
+	if (GET_SINGLE(InputManager)->GetButtonDown(KEY_TYPE::KEY_F)
+		|| GET_SINGLE(InputManager)->GetButton(KEY_TYPE::KEY_F)) {
+		NoteInput(false);
+	}
+
+	if (GET_SINGLE(InputManager)->GetButtonDown(KEY_TYPE::KEY_J)
+		|| GET_SINGLE(InputManager)->GetButton(KEY_TYPE::KEY_J)) {
+		NoteInput(true);
+	}
+
 	if (m_player)
 		m_player->Update();
 
@@ -73,6 +88,50 @@ void GameLine::DrawEdge()
 			}
 			else {
 				cout << " ";
+			}
+		}
+	}
+}
+
+void GameLine::NoteInput(bool right)
+{
+	if (right) {
+		for (int x = SCREEN_WIDTH / 2; x <= SCREEN_WIDTH / 2 + m_judgementWidth; x++) {
+			shared_ptr<Note> note = GET_SINGLE(NoteManager)->EqualNotePos(x);
+
+			if (note) {
+				if (note->GetType() == NOTE_TYPE::REVERSE) {
+					GET_SINGLE(NoteManager)->NoteMiss(note);
+				}
+				else {
+					if (note->GetLenght() == 1) {
+						GET_SINGLE(NoteManager)->Judgement(note);
+					}
+					else {
+						note->SetLenght(note->GetLenght() - 1);
+						note->GetPos().SetX(note->GetPos().X() + 1);
+					}
+				}
+			}
+		}
+	}
+	else {
+		for (int x = SCREEN_WIDTH / 2; x >= SCREEN_WIDTH / 2 - m_judgementWidth; x--) {
+			shared_ptr<Note> note = GET_SINGLE(NoteManager)->EqualNotePos(x);
+
+			if (note) {
+				if (note->GetType() == NOTE_TYPE::REVERSE) {
+					GET_SINGLE(NoteManager)->NoteMiss(note);
+				}
+				else {
+					if (note->GetLenght() == 1) {
+						GET_SINGLE(NoteManager)->Judgement(note);
+					}
+					else {
+						note->SetLenght(note->GetLenght() - 1);
+						note->GetPos().SetX(note->GetPos().X() - 1);
+					}
+				}
 			}
 		}
 	}

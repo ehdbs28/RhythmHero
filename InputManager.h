@@ -8,6 +8,8 @@ enum class KEY_TYPE {
 	RIGHT = VK_RIGHT,
 	SPACE = VK_SPACE,
 	BACK = VK_BACK,
+	KEY_J = 0x4A,
+	KEY_F = 0x46,
 };
 
 enum class KEY_STATE {

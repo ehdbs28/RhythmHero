@@ -3,7 +3,9 @@
 #include "TitleScene.h"
 #include "InputManager.h"
 #include "InfomationScene.h"
+#include "SongSelectScene.h"
 #include "GameScene.h"
+#include "AudioManager.h"
 
 bool Game::m_gameRunning = true;
 
@@ -31,7 +33,10 @@ void Game::Init()
 
 	GET_SINGLE(SceneManager)->RegisterScene(L"Title", make_shared<TitleScene>());
 	GET_SINGLE(SceneManager)->RegisterScene(L"Infomation", make_shared<InfomationScene>());
+	GET_SINGLE(SceneManager)->RegisterScene(L"SongSelect", make_shared<SongSelectScene>());
 	GET_SINGLE(SceneManager)->RegisterScene(L"InGame", make_shared<GameScene>());
+
+	GET_SINGLE(AudioManager)->RegisterSource("IDOL", TEXT("YOASOBI_IDOL.mp3"));
 
 	GET_SINGLE(SceneManager)->LoadScene(L"Title");
 

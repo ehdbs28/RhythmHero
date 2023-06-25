@@ -74,7 +74,6 @@ void Note::Update(float dt)
 			}
 		}
 	}
-
 }
 
 void Note::Render()
@@ -87,5 +86,5 @@ void Note::Render()
 
 void Note::Release()
 {
-	GET_SINGLE(NoteManager)->Judgement();
+	GET_SINGLE(NoteManager)->NoteMiss(shared_from_this());
 }

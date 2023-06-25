@@ -10,10 +10,10 @@ public:
 	~ProgressBar();
 
 public:
-	void	Init();
-	void	Update(float dt);
-	void	Render();
-	void	Release();
+	virtual void	Init();
+	virtual void	Update(float dt);
+	virtual void	Render();
+	virtual void	Release();
 
 public:
 	Pos&	GetPos() { return m_pos; }
@@ -24,7 +24,7 @@ public:
 public:
 	void	SetPercent(float percent);
 
-private:
+protected:
 	Pos		m_pos;
 
 	int		m_width;

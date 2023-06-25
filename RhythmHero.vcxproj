@@ -121,6 +121,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -138,12 +139,16 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="Combo.cpp" />
+    <ClCompile Include="ComboManager.cpp" />
     <ClCompile Include="Console.cpp" />
     <ClCompile Include="Fever.cpp" />
+    <ClCompile Include="FeverManager.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameLine.cpp" />
     <ClCompile Include="GameScene.cpp" />
@@ -157,13 +162,17 @@
     <ClCompile Include="ProgressBar.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="SongSelectScene.cpp" />
     <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AudioManager.h" />
     <ClInclude Include="Combo.h" />
+    <ClInclude Include="ComboManager.h" />
     <ClInclude Include="Console.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="Fever.h" />
+    <ClInclude Include="FeverManager.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameLine.h" />
     <ClInclude Include="GameScene.h" />
@@ -176,6 +185,7 @@
     <ClInclude Include="ProgressBar.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="SongSelectScene.h" />
     <ClInclude Include="TitleScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

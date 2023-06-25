@@ -60,7 +60,7 @@ void ProgressBar::Release()
 
 void ProgressBar::SetPercent(float percent)
 {
-	m_currentValue = percent;
+	m_currentValue += percent;
 
 	if (m_currentValue < m_leftValue)
 		m_currentValue = m_leftValue;

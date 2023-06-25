@@ -1,20 +1,20 @@
 #include "Fever.h"
 
-Fever::Fever()
+Fever::Fever() 
+	: ProgressBar()
 {
 	m_feverDuration = 1.0f;
 	m_feverStartTime = 0.0f;
 	m_currentTime = 0.0f;
-	m_percent = 0.0f;
 	m_progressingFever = false;
 }
 
-Fever::Fever(float duration)
+Fever::Fever(Pos pos, int width, int height, float left, float right, string name, float duration)
+	: ProgressBar(pos, width, height, left, right, name)
 {
 	m_feverDuration = duration;
 	m_feverStartTime = 0.0f;
 	m_currentTime = 0.0f;
-	m_percent = 0.0f;
 	m_progressingFever = false;
 }
 
@@ -24,10 +24,12 @@ Fever::~Fever()
 
 void Fever::Init()
 {
+	ProgressBar::Init();
 }
 
 void Fever::Update(float dt)
 {
+	ProgressBar::Update(dt);
 	if (m_progressingFever) {
 		m_currentTime = (UINT)time(nullptr);
 
@@ -39,24 +41,18 @@ void Fever::Update(float dt)
 
 void Fever::Render()
 {
+	ProgressBar::Render();
 }
 
 void Fever::Release()
 {
-}
-
-void Fever::SetPercent(float increase)
-{
-	m_percent += increase;
-
-	if (m_percent >= 1.0f) {
-		m_percent = 0.0f;
-		m_feverStartTime = (UINT)time(nullptr);
-		m_currentTime = 0.0f;
-		m_progressingFever = true;
-	}
+	ProgressBar::Release();
 }
 
 void Fever::StartFever()
 {
+	m_currentValue = 0.0f;
+	m_feverStartTime = (UINT)time(nullptr);
+	m_currentTime = 0.0f;
+	m_progressingFever = true;
 }

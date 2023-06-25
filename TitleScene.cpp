@@ -91,7 +91,7 @@ void TitleScene::DrawMenu()
 void TitleScene::MenuSelect()
 {
 	if (m_cursor == 0) {
-		GET_SINGLE(SceneManager)->LoadScene(L"InGame");
+		GET_SINGLE(SceneManager)->LoadScene(L"SongSelect");
 	}
 	else if (m_cursor == 1) {
 		GET_SINGLE(SceneManager)->LoadScene(L"Infomation");
